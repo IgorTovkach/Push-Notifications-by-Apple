@@ -7,3 +7,12 @@ C:\Users\Igor\Desktop\Push notifications\Push notifications\bin\Debug\NLog.dll
 C:\Users\Igor\Desktop\Push notifications\Push notifications\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Igor\Desktop\Push notifications\Push notifications\obj\Debug\Push notifications.exe
 C:\Users\Igor\Desktop\Push notifications\Push notifications\obj\Debug\Push notifications.pdb
+C:\Users\Igor\Documents\Push-Notifications-by-Apple\Push notifications\bin\Debug\Push notifications.exe.config
+C:\Users\Igor\Documents\Push-Notifications-by-Apple\Push notifications\obj\Debug\Push notifications.exe
+C:\Users\Igor\Documents\Push-Notifications-by-Apple\Push notifications\obj\Debug\Push notifications.pdb
+C:\Users\Igor\Documents\Push-Notifications-by-Apple\Push notifications\bin\Debug\Push notifications.exe
+C:\Users\Igor\Documents\Push-Notifications-by-Apple\Push notifications\bin\Debug\Push notifications.pdb
+C:\Users\Igor\Documents\Push-Notifications-by-Apple\Push notifications\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Igor\Documents\Push-Notifications-by-Apple\Push notifications\bin\Debug\NLog.dll
+C:\Users\Igor\Documents\Push-Notifications-by-Apple\Push notifications\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Igor\Documents\Push-Notifications-by-Apple\Push notifications\obj\Debug\Push notifications.csprojResolveAssemblyReference.cache
