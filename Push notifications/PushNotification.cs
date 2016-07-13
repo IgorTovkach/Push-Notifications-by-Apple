@@ -109,28 +109,25 @@ namespace Push_notifications
                 {
                     Connect(_host, NotificationPort, _certificates);
                     var response = new byte[6];
-                    _apnsStream.BeginRead(response, 0, 6, ReadResponse, new MyAsyncInfo(response, _apnsStream));
+                    
+                        _apnsStream.BeginRead(response, 0, 6, ReadResponse, new MyAsyncInfo(response, _apnsStream));
                 }
                 try
                 {
-                    if (item.DeviceToken.Length == 64)
-                        //check lenght of device token, if its shorter or longer stop generating Payload.
+                    if (item.DeviceToken.Length == 64) //check lenght of device token, if its shorter or longer stop generating Payload.
                     {
                         item.PayloadId = i;
-                        var payload = GeneratePayload(item);
+                        byte[] payload = GeneratePayload(item);
                         _apnsStream.Write(payload);
-                        Logger.Info("Notification successfully sent to APNS server for Device Toekn : " +
-                                    item.DeviceToken);
+                        Logger.Info("Notification successfully sent to APNS server for Device Toekn : " + item.DeviceToken);
                         Thread.Sleep(1000); //Wait to get the response from apple.
                     }
                     else
                         Logger.Error("Invalid device token length, possible simulator entry: " + item.DeviceToken);
-
                 }
                 catch (Exception ex)
                 {
-                    Logger.Error(
-                        $"An error occurred on sending payload for device token {item.DeviceToken} - {ex.Message}");
+                    Logger.Error("An error occurred on sending payload for device token {0} - {1}", item.DeviceToken, ex.Message);
                     _conected = false;
                 }
                 i++;
@@ -220,7 +217,7 @@ namespace Push_notifications
 
             try
             {
-                _apnsStream.AuthenticateAsClient(host, certificates, SslProtocols.Ssl3, false);
+                _apnsStream.AuthenticateAsClient(host, certificates, SslProtocols.Tls, false);
             }
             catch (AuthenticationException ex)
             {
@@ -381,4 +378,6 @@ namespace Push_notifications
             return null;
         }
     }
+
+    
 }
